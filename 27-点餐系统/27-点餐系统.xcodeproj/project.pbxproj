@@ -15,6 +15,8 @@
 		7EE8D1001D40F03D00443C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8D0FE1D40F03D00443C35 /* LaunchScreen.storyboard */; };
 		7EE8D10B1D40F03D00443C35 /* _7_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8D10A1D40F03D00443C35 /* _7_____Tests.m */; };
 		7EE8D1161D40F03D00443C35 /* _7_____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8D1151D40F03D00443C35 /* _7_____UITests.m */; };
+		7EE8D1241D410E9A00443C35 /* foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8D1231D410E9A00443C35 /* foods.plist */; };
+		7EE8D1271D41123900443C35 /* LogExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8D1261D41123900443C35 /* LogExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		7EE8D1111D40F03D00443C35 /* 27-点餐系统UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "27-点餐系统UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE8D1151D40F03D00443C35 /* _7_____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_7_____UITests.m"; sourceTree = "<group>"; };
 		7EE8D1171D40F03D00443C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EE8D1231D410E9A00443C35 /* foods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foods.plist; sourceTree = "<group>"; };
+		7EE8D1251D41123900443C35 /* LogExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogExtension.h; sourceTree = "<group>"; };
+		7EE8D1261D41123900443C35 /* LogExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogExtension.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,8 @@
 		7EE8D0EF1D40F03D00443C35 /* 27-点餐系统 */ = {
 			isa = PBXGroup;
 			children = (
+				7EE8D1251D41123900443C35 /* LogExtension.h */,
+				7EE8D1261D41123900443C35 /* LogExtension.m */,
 				7EE8D0F31D40F03D00443C35 /* AppDelegate.h */,
 				7EE8D0F41D40F03D00443C35 /* AppDelegate.m */,
 				7EE8D0F61D40F03D00443C35 /* ViewController.h */,
@@ -118,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				7EE8D0F11D40F03D00443C35 /* main.m */,
+				7EE8D1231D410E9A00443C35 /* foods.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -243,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE8D1241D410E9A00443C35 /* foods.plist in Resources */,
 				7EE8D1001D40F03D00443C35 /* LaunchScreen.storyboard in Resources */,
 				7EE8D0FD1D40F03D00443C35 /* Assets.xcassets in Resources */,
 				7EE8D0FB1D40F03D00443C35 /* Main.storyboard in Resources */,
@@ -270,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE8D1271D41123900443C35 /* LogExtension.m in Sources */,
 				7EE8D0F81D40F03D00443C35 /* ViewController.m in Sources */,
 				7EE8D0F51D40F03D00443C35 /* AppDelegate.m in Sources */,
 				7EE8D0F21D40F03D00443C35 /* main.m in Sources */,
@@ -496,6 +506,7 @@
 				7EE8D11C1D40F03D00443C35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EE8D11D1D40F03D00443C35 /* Build configuration list for PBXNativeTarget "27-点餐系统Tests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +515,7 @@
 				7EE8D11F1D40F03D00443C35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EE8D1201D40F03D00443C35 /* Build configuration list for PBXNativeTarget "27-点餐系统UITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +524,7 @@
 				7EE8D1221D40F03D00443C35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
