@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="CTS-n0-TnL" customClass="ToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem title="上一个" id="XsG-Ue-V8u">
+                    <connections>
+                        <action selector="preClick:" destination="CTS-n0-TnL" id="EYB-Ay-SdZ"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="下一个" id="bJQ-Ub-MBU">
+                    <connections>
+                        <action selector="nextClick:" destination="CTS-n0-TnL" id="mnf-nt-vRt"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem systemItem="flexibleSpace" id="5Hj-hj-Zuq"/>
+                <barButtonItem title="完成" id="XJS-2z-Qtj">
+                    <connections>
+                        <action selector="doneClick:" destination="CTS-n0-TnL" id="J40-sX-ldw"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+            <connections>
+                <outlet property="doneButton" destination="XJS-2z-Qtj" id="LGd-E1-UgN"/>
+                <outlet property="nextButton" destination="bJQ-Ub-MBU" id="tbF-nz-ZDF"/>
+                <outlet property="preButton" destination="XsG-Ue-V8u" id="wPe-gI-2Jr"/>
+            </connections>
+            <point key="canvasLocation" x="251" y="326"/>
+        </toolbar>
+    </objects>
+</document>
