@@ -9,6 +9,12 @@
 #import "LoginViewController.h"
 #import "SVProgressHUD.h"
 #import "ContactTableViewController.h"
+//宏的定义名称格式SCREEN_WIDTH或kScreenWidth
+#define kUserNameKey @"username"
+#define kPasswordKey @"password"
+#define kPasswordSwitchKey @"passwordSwitch"
+#define kLoginSwitchKey @"loginSwitch"
+
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
@@ -27,6 +33,18 @@
     [self.usernameField addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
     [self.passwordField addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
     [self.loginButton addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
+    NSUserDefaults *ud=[NSUserDefaults standardUserDefaults];
+    self.passwordSwitch.on=[ud boolForKey:kPasswordSwitchKey];
+    self.loginSwitch.on=[ud boolForKey:kLoginSwitchKey];
+    if (self.passwordSwitch.on) {
+        self.usernameField.text=[ud objectForKey:kUserNameKey];
+        self.passwordField.text=[ud objectForKey:kPasswordKey];
+        self.loginButton.enabled=YES;
+    }
+    if (self.loginSwitch.on) {
+        [self login];
+    }
+
 }
 -(void)textChange{
 //    if (self.usernameField.text.length>0&&self.passwordField.text.length>0) {
@@ -47,8 +65,16 @@
         [SVProgressHUD dismiss];
         if ([self.usernameField.text isEqualToString:@"1"]&&[self.passwordField.text isEqualToString:@"1"]) {
             
-            //Segue必须由来源控制器来执行，也就是这个方法必须由来源控制器调用
+            //执行id为"login2contact"的Segue，这个方法必须由来源控制器来执行，也就是这个方法必须由来源控制器调用
             [self performSegueWithIdentifier:@"login2contact" sender:nil];
+            //登录成功则保存用户名密码和两个开关状态到preference
+            NSUserDefaults *ud=[NSUserDefaults standardUserDefaults];
+            [ud setBool:self.loginSwitch.isOn forKey:kLoginSwitchKey];
+            [ud setBool:self.passwordSwitch.isOn forKey:kPasswordSwitchKey];
+            [ud setObject:self.usernameField.text forKey:kUserNameKey];
+            [ud setObject:self.passwordField.text forKey:kPasswordKey];
+            [ud synchronize];
+            
         }else{
             [SVProgressHUD showErrorWithStatus:@"用户名或密码错误！" ];
             [SVProgressHUD setDefaultMaskType: SVProgressHUDMaskTypeBlack];//灰色背景效果
