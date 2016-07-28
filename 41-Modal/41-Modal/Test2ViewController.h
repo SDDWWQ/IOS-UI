@@ -1,5 +1,5 @@
 //
-//  TestViewController.h
+//  Test2ViewController.h
 //  41-Modal
 //
 //  Created by shadandan on 16/7/28.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestViewController : UIViewController
-@property(nonatomic,copy)dispatch_block_t dismissBlock;
+@interface Test2ViewController : UIViewController
+@property(nonatomic,copy)dispatch_block_t cdismissBlock;
 @end

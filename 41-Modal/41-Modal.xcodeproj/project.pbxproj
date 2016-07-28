@@ -16,6 +16,7 @@
 		7E9C96291D4A305B001E4AA0 /* _1_ModalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9C96281D4A305B001E4AA0 /* _1_ModalTests.m */; };
 		7E9C96341D4A305C001E4AA0 /* _1_ModalUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9C96331D4A305B001E4AA0 /* _1_ModalUITests.m */; };
 		7E9C96431D4A307F001E4AA0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9C96421D4A307F001E4AA0 /* TestViewController.m */; };
+		7E9C96851D4A3D7B001E4AA0 /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9C96841D4A3D7B001E4AA0 /* Test2ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		7E9C96351D4A305C001E4AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E9C96411D4A307F001E4AA0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		7E9C96421D4A307F001E4AA0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		7E9C96831D4A3D7B001E4AA0 /* Test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
+		7E9C96841D4A3D7B001E4AA0 /* Test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				7E9C960E1D4A305B001E4AA0 /* Supporting Files */,
 				7E9C96411D4A307F001E4AA0 /* TestViewController.h */,
 				7E9C96421D4A307F001E4AA0 /* TestViewController.m */,
+				7E9C96831D4A3D7B001E4AA0 /* Test2ViewController.h */,
+				7E9C96841D4A3D7B001E4AA0 /* Test2ViewController.m */,
 			);
 			path = "41-Modal";
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9C96851D4A3D7B001E4AA0 /* Test2ViewController.m in Sources */,
 				7E9C96161D4A305B001E4AA0 /* ViewController.m in Sources */,
 				7E9C96131D4A305B001E4AA0 /* AppDelegate.m in Sources */,
 				7E9C96431D4A307F001E4AA0 /* TestViewController.m in Sources */,
@@ -502,6 +508,7 @@
 				7E9C963A1D4A305C001E4AA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E9C963B1D4A305C001E4AA0 /* Build configuration list for PBXNativeTarget "41-ModalTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +517,7 @@
 				7E9C963D1D4A305C001E4AA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E9C963E1D4A305C001E4AA0 /* Build configuration list for PBXNativeTarget "41-ModalUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +526,7 @@
 				7E9C96401D4A305C001E4AA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
