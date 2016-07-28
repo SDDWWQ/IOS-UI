@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ContactModel : NSObject
+@interface ContactModel : NSObject<NSCoding>
 @property(nonatomic,copy)NSString *name;
 @property(nonatomic,copy)NSString *phoneNumber;
 @end

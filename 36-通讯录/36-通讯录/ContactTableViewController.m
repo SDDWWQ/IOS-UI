@@ -25,7 +25,12 @@
     self.tableView.tableFooterView=[[UIView alloc]init];
     //设置分割线的边距
     [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];//上左下右的边距
+    NSString *docPath=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *filePath=[docPath stringByAppendingPathComponent:@"contacts.data"];
+    //解档
+    self.contacts=[NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
    }
+
 //设置分割线左对齐
 -(void)viewDidLayoutSubviews{
     if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
@@ -43,6 +48,7 @@
         [self.tableView setLayoutMargins:UIEdgeInsetsZero];
     }
 }
+
 //注销按钮的响应事件
 - (IBAction)logout:(id)sender {
     UIActionSheet *sheet=[[UIActionSheet alloc]initWithTitle:@"确定要注销吗" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"确定"otherButtonTitles:nil, nil];
@@ -82,11 +88,16 @@
     }
     return _contacts;
 }
+#pragma mark-AddViewController的代理方法
 -(void)addViewController:(AddViewController *)addViewController withContact:(ContactModel *)contact{
     NSLog(@"%@%@",contact.name,contact.phoneNumber);
     [self.contacts addObject:contact];
     [self.tableView reloadData];
-
+    NSString *docPath=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *filePath=[docPath stringByAppendingPathComponent:@"contacts.data"];
+    //归档
+    [NSKeyedArchiver archiveRootObject:self.contacts toFile:filePath];
+    
 }
 
 #pragma mark-数据源方法
@@ -102,6 +113,27 @@
     cell.textLabel.text=contact.name;
     cell.detailTextLabel.text=contact.phoneNumber;
     return cell;
+}
+
+//修改删除按钮的文字
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除";
+}
+
+
+//也可以滑动效果插件ja swipe cell
+//进入编辑模式,实现这个方法就能出现滑动删除的界面效果，点击删除按钮的时候调用此方法
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    //删除模型数组中的数据，必须先删除模型数据再删除单元格cell
+    [self.contacts removeObjectAtIndex:indexPath.row];
+    //删除,方法1：
+    //[self.tableView reloadData];
+    //删除,方法2:
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+    //归档
+    NSString *docPath=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *filePath=[docPath stringByAppendingPathComponent:@"contacts.data"];
+    [NSKeyedArchiver archiveRootObject:self.contacts toFile:filePath];
 }
 #pragma mark-EditViewController代理方法
 -(void)editViewController:(EditViewController *)editViewController andContact:(ContactModel *)contact{
