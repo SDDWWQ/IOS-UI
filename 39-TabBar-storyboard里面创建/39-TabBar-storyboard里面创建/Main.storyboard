@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dMm-Jz-xm0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2XU-IK-dqJ">
+            <objects>
+                <tabBarController id="dMm-Jz-xm0" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="E7Y-X2-Scn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xTS-w8-XtP" kind="relationship" relationship="viewControllers" id="llD-9w-fCd"/>
+                        <segue destination="A3j-Ld-cLi" kind="relationship" relationship="viewControllers" id="Od1-Pj-lz0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNJ-NJ-3S6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1163" y="-266"/>
+        </scene>
+        <!--消息-->
+        <scene sceneID="bPd-Tr-hln">
+            <objects>
+                <viewController id="xTS-w8-XtP" customClass="GreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FBs-iv-8GB"/>
+                        <viewControllerLayoutGuide type="bottom" id="p44-fV-QD9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="46c-NO-00V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.65745728329999997" green="1" blue="0.60512649279999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="消息" image="tab_recent_nor" badgeValue="23" id="C34-Fu-hLy"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xyV-aH-2iP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743" y="-266"/>
+        </scene>
+        <!--联系人-->
+        <scene sceneID="Lq7-f5-HlH">
+            <objects>
+                <viewController id="A3j-Ld-cLi" customClass="YellowViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4xy-eL-Vh3"/>
+                        <viewControllerLayoutGuide type="bottom" id="IVs-tX-wFi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="paV-iH-KQk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="联系人" image="tab_buddy_nor" id="CqA-yU-Qda"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w4j-of-cpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743" y="389"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_buddy_nor" width="29" height="29"/>
+        <image name="tab_recent_nor" width="29" height="29"/>
+    </resources>
+</document>

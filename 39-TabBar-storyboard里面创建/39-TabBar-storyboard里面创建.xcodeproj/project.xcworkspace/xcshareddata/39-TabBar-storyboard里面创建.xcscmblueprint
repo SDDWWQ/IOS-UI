@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "52186FCEBC96363C20B9A27E8FB84AED826E030B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "52186FCEBC96363C20B9A27E8FB84AED826E030B" : 0,
+    "EAF5E32B41409151977DDD98AA17E846CB16E524" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1B656A25-6B18-455F-96D6-4FAB4D7F591B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "52186FCEBC96363C20B9A27E8FB84AED826E030B" : "UI%E8%BF%9B%E9%98%B6\/",
+    "EAF5E32B41409151977DDD98AA17E846CB16E524" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "39-TabBar-storyboard里面创建",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "39-TabBar-storyboard里面创建\/39-TabBar-storyboard里面创建.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SDDWWQ\/IOS-UI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "52186FCEBC96363C20B9A27E8FB84AED826E030B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SDDWWQ\/UI",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EAF5E32B41409151977DDD98AA17E846CB16E524"
+    }
+  ]
+}
