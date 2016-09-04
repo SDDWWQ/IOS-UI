@@ -7,7 +7,7 @@
 //
 
 #import "ContactViewController.h"
-
+#import "ViewController.h"
 @interface ContactViewController ()
 
 @end
@@ -24,7 +24,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)btnClick:(UIButton *)sender {
-    
+    [[ViewController shareDrawer]openLeftMenu];//打开抽屉
 }
 
 /*
