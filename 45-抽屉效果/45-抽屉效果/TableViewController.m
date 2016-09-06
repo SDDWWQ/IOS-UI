@@ -22,9 +22,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.view.layer.contents=(__bridge id _Nullable)([UIImage imageNamed:@"72w58PICshJ_1024"].CGImage);
+    self.tableView.layer.contents=(__bridge id _Nullable)([UIImage imageNamed:@"72w58PICshJ_1024"].CGImage);
     self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
-    UIView *headerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 200)];
+    UIView *headerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
+    headerView.backgroundColor=[UIColor whiteColor];
     self.tableView.tableHeaderView=headerView;
 }
 
