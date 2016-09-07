@@ -103,9 +103,31 @@
         _coverBtn=[[UIButton alloc]init];
        // _coverBtn.backgroundColor=[UIColor orangeColor];
         _coverBtn.frame=self.tabbarController.view.bounds;
+        //监听按钮的点击
         [_coverBtn addTarget:self action:@selector(coverBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        //创建一个拖拽手势
+        UIPanGestureRecognizer *pan=[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panCoverBtn:)];//拖拽遮盖按钮触发
     }
     return _coverBtn;
+}
+/**
+ *  监听遮盖按钮的拖拽手势
+ *
+ *  @param pan <#pan description#>
+ */
+-(void)panCoverBtn:(UIPanGestureRecognizer *)pan{
+    CGFloat screenW=[UIScreen mainScreen].bounds.size.width;
+    //获得x方向的拖拽距离
+    CGFloat offsetX=[pan translationInView:pan.view].x;
+    NSLog(@"offsetX=%f",offsetX);//往右边拖偏移值大于0，往左边拖偏移值小于0
+    
+    //如果偏移值大于0，则是往右边拖拽遮盖按钮，直接返回，没有效果
+    if(offsetX>0)return;
+    CGFloat distance=self.leftWidth-ABS(offsetX);//300-100=200
+    if(pan.state==UIGestureRecognizerStateEnded||pan.state==UIGestureRecognizerStateCancelled){
+        
+    }
+    
 }
 //打开左边菜单控制器
 -(void)openLeftMenu{
