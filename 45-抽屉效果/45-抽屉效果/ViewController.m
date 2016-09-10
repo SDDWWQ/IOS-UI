@@ -107,6 +107,7 @@
         [_coverBtn addTarget:self action:@selector(coverBtnClick) forControlEvents:UIControlEventTouchUpInside];
         //创建一个拖拽手势
         UIPanGestureRecognizer *pan=[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panCoverBtn:)];//拖拽遮盖按钮触发
+        [_coverBtn addGestureRecognizer:pan];
     }
     return _coverBtn;
 }
@@ -123,9 +124,18 @@
     
     //如果偏移值大于0，则是往右边拖拽遮盖按钮，直接返回，没有效果
     if(offsetX>0)return;
-    CGFloat distance=self.leftWidth-ABS(offsetX);//300-100=200
+    //CGFloat distance=self.leftWidth-ABS(offsetX);//300-100=200
     if(pan.state==UIGestureRecognizerStateEnded||pan.state==UIGestureRecognizerStateCancelled){
+        //判断TabBarController的View有没有超过屏幕的一半
+        if(self.tabbarController.view.frame.origin.x>screenW*0.5){
+            [self openLeftMenu];
+        }else {
+            [self coverBtnClick];//恢复回去，抽屉覆盖状态
+        }
         
+    }else if(pan.state==UIGestureRecognizerStateChanged){
+        self.tabbarController.view.transform=CGAffineTransformMakeTranslation(self.leftWidth-ABS(offsetX), 0);//手拖拽时TabBar向左移动，transform每次都是设定与屏幕左边界向右和向下变换到传入参数的距离
+        self.tableViewController.view.transform=CGAffineTransformMakeTranslation(-ABS(offsetX), 0);
     }
     
 }
