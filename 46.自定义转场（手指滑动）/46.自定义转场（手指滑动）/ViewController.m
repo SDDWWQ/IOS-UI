@@ -40,6 +40,21 @@
 //}
 //检测到拖拽手势后执行
 -(void)didRecognizedPanGesture:(UIPanGestureRecognizer *)recognizer{
+    if(recognizer.state==UIGestureRecognizerStateEnded||recognizer.state==UIGestureRecognizerStateCancelled){
+        if(recognizer.view.transform.b>0.16){//要让蓝色View掉下去
+            [UIView animateWithDuration:1.0 animations:^{
+                recognizer.view.transform=CGAffineTransformMakeRotation(M_PI_2);
+            }];
+            
+        }else if(recognizer.view.transform.b<-0.16){//要让蓝色View掉下去
+            [UIView animateWithDuration:1.0 animations:^{
+                recognizer.view.transform=CGAffineTransformMakeRotation(-M_PI_2);
+            }];
+        }else{
+        //要让蓝色view恢复到原始位置
+        recognizer.view.transform=CGAffineTransformIdentity;
+        }
+    }else{
     //1.获取拖拽手势手指的偏移的x值
     CGFloat offsetX=[recognizer translationInView:recognizer.view].x;
     //2.计算当前手指位置的x值占屏幕宽度的百分比
@@ -48,6 +63,7 @@
     CGFloat radians=M_PI_4*percent;
     //4.让blueView旋转
     self.blueView.transform=CGAffineTransformMakeRotation(radians);
+    }
     
 }
 - (void)didReceiveMemoryWarning {
