@@ -15,6 +15,9 @@
 		7E67DE0E1D9B582C00402265 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E67DE0C1D9B582C00402265 /* LaunchScreen.storyboard */; };
 		7E67DE191D9B582C00402265 /* _6____________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E67DE181D9B582C00402265 /* _6____________Tests.m */; };
 		7E67DE241D9B582C00402265 /* _6____________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E67DE231D9B582C00402265 /* _6____________UITests.m */; };
+		7EFEBEEC1DAA2428008DAB5E /* BlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEBEEB1DAA2428008DAB5E /* BlueViewController.m */; };
+		7EFEBEEF1DAA768D008DAB5E /* AnimationPresentedProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEBEEE1DAA768D008DAB5E /* AnimationPresentedProxy.m */; };
+		7EFEBEF21DAA76A1008DAB5E /* AnimationDissmissedProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEBEF11DAA76A1008DAB5E /* AnimationDissmissedProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		7E67DE1F1D9B582C00402265 /* 46.自定义转场（手指滑动）UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "46.自定义转场（手指滑动）UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E67DE231D9B582C00402265 /* _6____________UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_6____________UITests.m"; sourceTree = "<group>"; };
 		7E67DE251D9B582C00402265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EFEBEEA1DAA2428008DAB5E /* BlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueViewController.h; sourceTree = "<group>"; };
+		7EFEBEEB1DAA2428008DAB5E /* BlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueViewController.m; sourceTree = "<group>"; };
+		7EFEBEED1DAA768D008DAB5E /* AnimationPresentedProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationPresentedProxy.h; sourceTree = "<group>"; };
+		7EFEBEEE1DAA768D008DAB5E /* AnimationPresentedProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationPresentedProxy.m; sourceTree = "<group>"; };
+		7EFEBEF01DAA76A1008DAB5E /* AnimationDissmissedProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationDissmissedProxy.h; sourceTree = "<group>"; };
+		7EFEBEF11DAA76A1008DAB5E /* AnimationDissmissedProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationDissmissedProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +119,12 @@
 				7E67DE0C1D9B582C00402265 /* LaunchScreen.storyboard */,
 				7E67DE0F1D9B582C00402265 /* Info.plist */,
 				7E67DDFE1D9B582C00402265 /* Supporting Files */,
+				7EFEBEEA1DAA2428008DAB5E /* BlueViewController.h */,
+				7EFEBEEB1DAA2428008DAB5E /* BlueViewController.m */,
+				7EFEBEED1DAA768D008DAB5E /* AnimationPresentedProxy.h */,
+				7EFEBEEE1DAA768D008DAB5E /* AnimationPresentedProxy.m */,
+				7EFEBEF01DAA76A1008DAB5E /* AnimationDissmissedProxy.h */,
+				7EFEBEF11DAA76A1008DAB5E /* AnimationDissmissedProxy.m */,
 			);
 			path = "46.自定义转场（手指滑动）";
 			sourceTree = "<group>";
@@ -272,7 +287,10 @@
 			files = (
 				7E67DE061D9B582C00402265 /* ViewController.m in Sources */,
 				7E67DE031D9B582C00402265 /* AppDelegate.m in Sources */,
+				7EFEBEEC1DAA2428008DAB5E /* BlueViewController.m in Sources */,
+				7EFEBEEF1DAA768D008DAB5E /* AnimationPresentedProxy.m in Sources */,
 				7E67DE001D9B582C00402265 /* main.m in Sources */,
+				7EFEBEF21DAA76A1008DAB5E /* AnimationDissmissedProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +514,7 @@
 				7E67DE2A1D9B582C00402265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E67DE2B1D9B582C00402265 /* Build configuration list for PBXNativeTarget "46.自定义转场（手指滑动）Tests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +523,7 @@
 				7E67DE2D1D9B582C00402265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E67DE2E1D9B582C00402265 /* Build configuration list for PBXNativeTarget "46.自定义转场（手指滑动）UITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +532,7 @@
 				7E67DE301D9B582C00402265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
