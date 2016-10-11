@@ -21,6 +21,17 @@
 // This method can only  be a nop if the transition is interactive and not a percentDriven interactive transition.
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
     //1.获取这个转场动画的fromView
+    UIView *fromView=[transitionContext viewForKey:UITransitionContextFromViewKey];
+    //判断view的旋转方向
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+        if(fromView.transform.b>0){
+            fromView.transform=CGAffineTransformMakeRotation(M_PI_2);
+        }else{
+            
+        }fromView.transform=CGAffineTransformMakeRotation(-M_PI_2);
+    }completion:^(BOOL finished) {
+        [transitionContext completeTransition:YES];
+    }];
 }
 
 @end

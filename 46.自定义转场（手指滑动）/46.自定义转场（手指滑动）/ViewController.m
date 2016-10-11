@@ -11,7 +11,6 @@
 #import "AnimationPresentedProxy.h"
 #import "AnimationDissmissedProxy.h"
 @interface ViewController ()<UIViewControllerTransitioningDelegate>
-@property(nonatomic,weak)UIView *blueView;
 
 @end
 
@@ -19,21 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 创建一个蓝色view
-    UIView *blueView=[[UIView alloc]init];
-    blueView.backgroundColor=[UIColor blueColor];
-    
-    //修改blueView的anchorPoint属性
-    blueView.layer.anchorPoint=CGPointMake(0.5, 2);//一定要在设置frame之前设置锚点，否则会默认认为锚点是中心点，从更改frame的大小,参数值大于1，则anchorpoint在控件外部
-    
-    blueView.frame=self.view.bounds;
-    //[self.view addSubview:blueView];
-    self.blueView=blueView;
-    
-    //为blueView添加拖拽手势
-    UIPanGestureRecognizer *pan=[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(didRecognizedPanGesture:)];
-    //将手势添加到blueView上
-    [blueView addGestureRecognizer:pan];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
